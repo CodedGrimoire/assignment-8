@@ -1,48 +1,80 @@
 .footer {
-  width: 100%;
-  background-color: #ffffff;
-  border-top: 1px solid #e5e7eb;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  font-size: 14px;
-  color: #555;
+  background-color: #021c34; /* Dark navy */
+  color: #fff;
+  padding: 30px 50px 15px;
   position: relative;
-  bottom: 0;
+  font-family: Arial, sans-serif;
 }
 
+/* Left logo + brand */
 .footer-left {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 600;
-  font-size: 16px;
-  color: #4a3aff;
+  float: left;
 }
 
 .footer-logo {
-  height: 28px;
-  width: auto;
+  width: 38px;
+  height: 38px;
 }
 
-.footer-center {
-  text-align: center;
-  flex: 1;
-  color: #555;
+.brand {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
 }
 
+/* Right section */
 .footer-right {
+  float: right;
+  text-align: right;
+}
+
+.footer-right h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.social-icons {
   display: flex;
-  gap: 18px;
+  gap: 12px;
+  justify-content: flex-end;
 }
 
-.footer-right a {
-  font-size: 18px;
-  color: #333;
-  transition: color 0.3s ease;
+.social-icons a {
+  background: #fff;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.footer-right a:hover {
-  color: #6c63ff;
+.social-icons a:hover {
+  background: #7b3ef3;
+  color: #fff;
+}
+
+/* Divider Line */
+.footer::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 50px auto 15px;
+}
+
+/* Bottom */
+.footer-bottom {
+  clear: both;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
 }

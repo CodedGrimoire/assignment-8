@@ -1,32 +1,35 @@
 import React from "react";
 import "./footer.css";
-import { FaGithub, FaFacebookF, FaTwitter } from "react-icons/fa";
+import { FaXTwitter, FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      {/* Left: Logo */}
+      {/* Left: Logo + Brand */}
       <div className="footer-left">
-        <img src="logo.png" alt="HERO.IO Logo" className="footer-logo" />
+        <img src="./logo.png" alt="HERO.IO Logo" className="footer-logo" />
         <span className="brand">HERO.IO</span>
       </div>
 
-      {/* Center: Text */}
-      <div className="footer-center">
-        <p>Copyright © 2025 - All right reserved</p>
+      {/* Right: Social Links */}
+      <div className="footer-right">
+        <h4>Social Links</h4>
+        <div className="social-icons">
+          <a href="#" aria-label="Twitter">
+            <FaXTwitter />
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <FaLinkedinIn />
+          </a>
+          <a href="#" aria-label="Facebook">
+            <FaFacebookF />
+          </a>
+        </div>
       </div>
 
-      {/* Right: Social links */}
-      <div className="footer-right">
-        <a href="#" aria-label="GitHub">
-          <FaGithub />
-        </a>
-        <a href="#" aria-label="Facebook">
-          <FaFacebookF />
-        </a>
-        <a href="#" aria-label="Twitter">
-          <FaTwitter />
-        </a>
+      {/* Bottom Center */}
+      <div className="footer-bottom">
+        <p>Copyright © 2025 - All right reserved</p>
       </div>
     </footer>
   );
