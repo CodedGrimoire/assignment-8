@@ -1,0 +1,362 @@
+[
+  {
+    "image": "app1.png",
+    "title": "ChatWave",
+    "companyName": "WaveTech",
+    "id": 1,
+    "description": "A modern messaging app with AI-powered suggestions and group video chat.",
+    "size": 85,
+    "reviews": 12000,
+    "ratingAvg": 4.5,
+    "downloads": 5000000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 7000 }
+    ]
+  },
+  {
+    "image": "app2.png",
+    "title": "FitTrack",
+    "companyName": "Healthify",
+    "id": 2,
+    "description": "Track your workouts, calories, and progress with smart analytics.",
+    "size": 60,
+    "reviews": 8900,
+    "ratingAvg": 4.2,
+    "downloads": 3500000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 1400 },
+      { "name": "4 star", "count": 2200 },
+      { "name": "5 star", "count": 3800 }
+    ]
+  },
+  {
+    "image": "app3.png",
+    "title": "EduLearn",
+    "companyName": "BrightMinds",
+    "id": 3,
+    "description": "Interactive online learning platform with quizzes and flashcards.",
+    "size": 110,
+    "reviews": 4500,
+    "ratingAvg": 4.7,
+    "downloads": 1200000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 3130 }
+    ]
+  },
+  {
+    "image": "app4.png",
+    "title": "MusicFlow",
+    "companyName": "TuneWorld",
+    "id": 4,
+    "description": "Stream unlimited songs and create AI-generated playlists.",
+    "size": 95,
+    "reviews": 22500,
+    "ratingAvg": 4.3,
+    "downloads": 15000000,
+    "ratings": [
+      { "name": "1 star", "count": 1000 },
+      { "name": "2 star", "count": 1500 },
+      { "name": "3 star", "count": 3500 },
+      { "name": "4 star", "count": 6500 },
+      { "name": "5 star", "count": 10000 }
+    ]
+  },
+  {
+    "image": "app5.png",
+    "title": "QuickRide",
+    "companyName": "MoveOn",
+    "id": 5,
+    "description": "Book taxis and rides instantly with real-time tracking.",
+    "size": 70,
+    "reviews": 17200,
+    "ratingAvg": 4.0,
+    "downloads": 8000000,
+    "ratings": [
+      { "name": "1 star", "count": 2000 },
+      { "name": "2 star", "count": 1800 },
+      { "name": "3 star", "count": 2600 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 6800 }
+    ]
+  },
+  {
+    "image": "app6.png",
+    "title": "PhotoGenie",
+    "companyName": "PixelSoft",
+    "id": 6,
+    "description": "AI photo enhancer and background remover for stunning visuals.",
+    "size": 150,
+    "reviews": 9400,
+    "ratingAvg": 4.6,
+    "downloads": 2500000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 2300 },
+      { "name": "5 star", "count": 5500 }
+    ]
+  },
+  {
+    "image": "app7.png",
+    "title": "TaskBuddy",
+    "companyName": "ProWorks",
+    "id": 7,
+    "description": "Boost productivity with task management and reminders.",
+    "size": 45,
+    "reviews": 3100,
+    "ratingAvg": 4.1,
+    "downloads": 900000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 900 }
+    ]
+  },
+  {
+    "image": "app8.png",
+    "title": "TravelMate",
+    "companyName": "WanderTech",
+    "id": 8,
+    "description": "Plan trips, find hotels, and explore destinations worldwide.",
+    "size": 125,
+    "reviews": 15000,
+    "ratingAvg": 4.4,
+    "downloads": 6500000,
+    "ratings": [
+      { "name": "1 star", "count": 800 },
+      { "name": "2 star", "count": 1200 },
+      { "name": "3 star", "count": 2000 },
+      { "name": "4 star", "count": 4200 },
+      { "name": "5 star", "count": 6800 }
+    ]
+  },
+  {
+    "image": "app9.png",
+    "title": "GameZone",
+    "companyName": "PlayWorks",
+    "id": 9,
+    "description": "A hub for casual and multiplayer games in one app.",
+    "size": 200,
+    "reviews": 27000,
+    "ratingAvg": 3.9,
+    "downloads": 20000000,
+    "ratings": [
+      { "name": "1 star", "count": 4000 },
+      { "name": "2 star", "count": 4500 },
+      { "name": "3 star", "count": 6500 },
+      { "name": "4 star", "count": 7000 },
+      { "name": "5 star", "count": 5000 }
+    ]
+  },
+  {
+    "image": "app10.png",
+    "title": "Foodie",
+    "companyName": "TastyTech",
+    "id": 10,
+    "description": "Order food from your favorite restaurants with real-time delivery tracking.",
+    "size": 90,
+    "reviews": 21000,
+    "ratingAvg": 4.3,
+    "downloads": 12000000,
+    "ratings": [
+      { "name": "1 star", "count": 1500 },
+      { "name": "2 star", "count": 1800 },
+      { "name": "3 star", "count": 3000 },
+      { "name": "4 star", "count": 6000 },
+      { "name": "5 star", "count": 8700 }
+    ]
+  },
+  {
+    "image": "app11.png",
+    "title": "DocScan",
+    "companyName": "ScanPro",
+    "id": 11,
+    "description": "Easily scan and convert documents into PDFs with OCR support.",
+    "size": 55,
+    "reviews": 6400,
+    "ratingAvg": 4.6,
+    "downloads": 3000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 1500 },
+      { "name": "5 star", "count": 3700 }
+    ]
+  },
+  {
+    "image": "app12.png",
+    "title": "SafeBank",
+    "companyName": "FinSecure",
+    "id": 12,
+    "description": "Your all-in-one secure digital banking and wallet solution.",
+    "size": 80,
+    "reviews": 11500,
+    "ratingAvg": 4.2,
+    "downloads": 7000000,
+    "ratings": [
+      { "name": "1 star", "count": 700 },
+      { "name": "2 star", "count": 1100 },
+      { "name": "3 star", "count": 2000 },
+      { "name": "4 star", "count": 3100 },
+      { "name": "5 star", "count": 4600 }
+    ]
+  },
+  {
+    "image": "app13.png",
+    "title": "MindCalm",
+    "companyName": "ZenApps",
+    "id": 13,
+    "description": "Meditation and mindfulness app with soothing sounds and guided sessions.",
+    "size": 65,
+    "reviews": 8800,
+    "ratingAvg": 4.8,
+    "downloads": 4000000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 1200 },
+      { "name": "5 star", "count": 6900 }
+    ]
+  },
+  {
+    "image": "app14.png",
+    "title": "NewsNow",
+    "companyName": "InfoStream",
+    "id": 14,
+    "description": "Stay updated with personalized news and live notifications.",
+    "size": 75,
+    "reviews": 5600,
+    "ratingAvg": 4.1,
+    "downloads": 2500000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1100 },
+      { "name": "4 star", "count": 1600 },
+      { "name": "5 star", "count": 2000 }
+    ]
+  },
+  {
+    "image": "app15.png",
+    "title": "LangPro",
+    "companyName": "LinguaTech",
+    "id": 15,
+    "description": "Learn new languages with AI tutors, games, and speech recognition.",
+    "size": 140,
+    "reviews": 12300,
+    "ratingAvg": 4.7,
+    "downloads": 5500000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 2800 },
+      { "name": "5 star", "count": 7700 }
+    ]
+  },
+  {
+    "image": "app16.png",
+    "title": "ShopEase",
+    "companyName": "MegaMart",
+    "id": 16,
+    "description": "Shop everything online with great deals, discounts, and fast delivery.",
+    "size": 130,
+    "reviews": 19800,
+    "ratingAvg": 4.4,
+    "downloads": 10000000,
+    "ratings": [
+      { "name": "1 star", "count": 1200 },
+      { "name": "2 star", "count": 1700 },
+      { "name": "3 star", "count": 2500 },
+      { "name": "4 star", "count": 4800 },
+      { "name": "5 star", "count": 9600 }
+    ]
+  },
+  {
+    "image": "app17.png",
+    "title": "WeatherPro",
+    "companyName": "SkyNet",
+    "id": 17,
+    "description": "Accurate weather forecasts with live radar and severe alerts.",
+    "size": 95,
+    "reviews": 8700,
+    "ratingAvg": 4.3,
+    "downloads": 4200000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 2600 },
+      { "name": "5 star", "count": 3500 }
+    ]
+  },
+  {
+    "image": "app18.png",
+    "title": "StreamBox",
+    "companyName": "MediaHub",
+    "id": 18,
+    "description": "Watch movies, series, and live TV with personalized recommendations.",
+    "size": 220,
+    "reviews": 31000,
+    "ratingAvg": 4.5,
+    "downloads": 18000000,
+    "ratings": [
+      { "name": "1 star", "count": 1500 },
+      { "name": "2 star", "count": 2200 },
+      { "name": "3 star", "count": 4000 },
+      { "name": "4 star", "count": 8000 },
+      { "name": "5 star", "count": 15300 }
+    ]
+  },
+  {
+    "image": "app19.png",
+    "title": "NoteSync",
+    "companyName": "CloudApps",
+    "id": 19,
+    "description": "Sync notes across devices with voice-to-text and cloud backup.",
+    "size": 50,
+    "reviews": 7200,
+    "ratingAvg": 4.6,
+    "downloads": 2700000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 3700 }
+    ]
+  },
+  {
+    "image": "app20.png",
+    "title": "CryptoVault",
+    "companyName": "BlockSecure",
+    "id": 20,
+    "description": "Manage cryptocurrencies securely with live market tracking.",
+    "size": 100,
+    "reviews": 15800,
+    "ratingAvg": 4.2,
+    "downloads": 6200000,
+    "ratings": [
+      { "name": "1 star", "count": 900 },
+      { "name": "2 star", "count": 1300 },
+      { "name": "3 star", "count": 2100 },
+      { "name": "4 star", "count": 4300 },
+      { "name": "5 star", "count": 5200 }
+    ]
+  }
+]

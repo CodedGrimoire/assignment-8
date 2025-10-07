@@ -1,0 +1,87 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  background: #fff;
+  
+}
+
+/* Logo + brand */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  width: 36px;
+  height: 36px;
+}
+
+.brand {
+  font-size: 16px;
+  font-weight: 600;
+  color: #7b3ef3; /* Purple text like in screenshot */
+}
+
+/* Navbar links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  font-size: 15px;
+  color: #222;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navbar-links li:hover {
+  color: #7b3ef3;
+}
+
+.navbar-links .active {
+  color: #7b3ef3;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Button */
+.navbar-btn {
+    background: #fff;
+    align-items: center;
+    display: flex;
+     gap: 0px;
+     justify-content: right;
+    
+    }
+  
+.navbar-btn button{
+  
+  
+ width: 200px;
+  background: linear-gradient(90deg, #7b3ef3, #a855f7);
+  border: none;
+ 
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+}
+.navbar-btn:hover {
+  opacity: 0.85;
+}
+
+.btn-icon {
+  font-size: 16px;
+}
