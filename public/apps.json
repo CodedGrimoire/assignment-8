@@ -1,6 +1,6 @@
 [
   {
-    "image": "app1.png",
+    "image": "demo-app (1).webp",
     "title": "ChatWave",
     "companyName": "WaveTech",
     "id": 1,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "image": "app2.png",
+    "image": "demo-app (2).webp",
     "title": "FitTrack",
     "companyName": "Healthify",
     "id": 2,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "image": "app3.png",
+    "image": "demo-app (3).webp",
     "title": "EduLearn",
     "companyName": "BrightMinds",
     "id": 3,
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "image": "app4.png",
+    "image": "demo-app (4).webp",
     "title": "MusicFlow",
     "companyName": "TuneWorld",
     "id": 4,
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "image": "app5.png",
+    "image": "demo-app (5).webp",
     "title": "QuickRide",
     "companyName": "MoveOn",
     "id": 5,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "image": "app6.png",
+    "image": "demo-app (6).webp",
     "title": "PhotoGenie",
     "companyName": "PixelSoft",
     "id": 6,
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "image": "app7.png",
+    "image": "demo-app (1).webp",
     "title": "TaskBuddy",
     "companyName": "ProWorks",
     "id": 7,
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "app8.png",
+    "image": "demo-app (2).webp",
     "title": "TravelMate",
     "companyName": "WanderTech",
     "id": 8,
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "image": "app9.png",
+    "image": "demo-app (3).webp",
     "title": "GameZone",
     "companyName": "PlayWorks",
     "id": 9,
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "image": "app10.png",
+    "image": "demo-app (4).webp",
     "title": "Foodie",
     "companyName": "TastyTech",
     "id": 10,
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "image": "app11.png",
+    "image": "demo-app (5).webp",
     "title": "DocScan",
     "companyName": "ScanPro",
     "id": 11,
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "image": "app12.png",
+    "image": "demo-app (6).webp",
     "title": "SafeBank",
     "companyName": "FinSecure",
     "id": 12,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "image": "app13.png",
+    "image": "demo-app (1).webp",
     "title": "MindCalm",
     "companyName": "ZenApps",
     "id": 13,
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "image": "app14.png",
+    "image": "demo-app (2).webp",
     "title": "NewsNow",
     "companyName": "InfoStream",
     "id": 14,
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "image": "app15.png",
+    "image": "demo-app (3).webp",
     "title": "LangPro",
     "companyName": "LinguaTech",
     "id": 15,
@@ -270,7 +270,7 @@
     ]
   },
   {
-    "image": "app16.png",
+    "image": "demo-app (4).webp",
     "title": "ShopEase",
     "companyName": "MegaMart",
     "id": 16,
@@ -288,7 +288,7 @@
     ]
   },
   {
-    "image": "app17.png",
+    "image": "demo-app (5).webp",
     "title": "WeatherPro",
     "companyName": "SkyNet",
     "id": 17,
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "image": "app18.png",
+    "image": "demo-app (6).webp",
     "title": "StreamBox",
     "companyName": "MediaHub",
     "id": 18,
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "image": "app19.png",
+    "image": "demo-app (1).webp",
     "title": "NoteSync",
     "companyName": "CloudApps",
     "id": 19,
@@ -342,7 +342,7 @@
     ]
   },
   {
-    "image": "app20.png",
+    "image": "demo-app (2).webp",
     "title": "CryptoVault",
     "companyName": "BlockSecure",
     "id": 20,

@@ -6,6 +6,8 @@ import Navbar from './components/navbar/navbar'
 
 import Footer from './components/footer/footer'
 import Home from './components/home.jsx'
+import Alltheapps from './components/alltheapps.jsx'
+
 
 function App() {
   
@@ -13,6 +15,7 @@ function App() {
     <>
       <Navbar />
       <Home />
+      <Alltheapps />
       <Footer />
     </>
   )

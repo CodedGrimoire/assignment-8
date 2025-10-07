@@ -1,26 +1,45 @@
 import React, { useEffect, useState } from 'react';
-import "./trending.css";
+import "./alltheapps.css";
 
-const Trending = () => {
+const AllTheApps = () => {
   const [apps, setApps] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("trending.json")
+    fetch("apps.json")
       .then((response) => response.json())
       .then((data) => {
         setApps(data);
       });
   }, []);
 
-  return (
-    <div className="trending-container">
-      <h1 className="trending-title">Trending Apps</h1>
-      <p className="trending-subtitle">
-        Explore All Trending Apps on the Market developed by us
-      </p>
+  // Filter apps based on search
+  const filteredApps = apps.filter((app) =>
+    app.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
+  return (
+    <div className="allapps-container">
+      <div className="headings">
+        <h1>Our All Applications</h1>
+        <p>Explore All Apps on the Market developed by us. We code for Millions</p>
+      </div>
+
+      {/* Count + Search */}
+      <div className="number_search">
+        <h3>{filteredApps.length} Apps Found</h3>
+        <input
+          type="text"
+          placeholder="Search Apps..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-bar"
+        />
+      </div>
+
+      {/* Grid */}
       <div className="grid">
-        {apps.map((app) => (
+        {filteredApps.map((app) => (
           <div className="card" key={app.id}>
             <div className="card-image">
               <img src={app.image} alt={app.title} />
@@ -51,4 +70,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default AllTheApps;
