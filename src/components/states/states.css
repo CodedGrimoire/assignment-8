@@ -1,9 +1,7 @@
 .states {
   width: 100%;
-  padding: 80px 20px;
-  background: linear-gradient(90deg, #632ee3 0%, #9f62f2 100%);
-  color: #fff;
-  text-align: center;
+  padding: 81px 22px;
+  
 }
 
 .states h1 {
@@ -16,14 +14,19 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  align-items: center;
   gap: 80px;
+  
+  align-items: center;
+  
   
 }
 
 .state-box {
   text-align: center;
 }
+
+
+
 
 .state-box h2 {
   font-size: 42px;
@@ -39,5 +42,9 @@
 
 .state-box span {
   font-size: 14px;
-  color: #ddd;
+  color: #c9c7c7;
+}
+.states{background: linear-gradient(90deg, #632ee3 0%, #9f62f2 100%);
+  color: white;
+  text-align: center;
 }

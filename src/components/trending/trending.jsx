@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import "./trending.css";
+
+
+
 import { useNavigate } from "react-router-dom";
 
 const Trending = () => {
-  const [apps, setApps] = useState([]);
-  const navigate = useNavigate();
+
+  const [trendyyapps, setApps] = useState([]);
+  
 
   useEffect(() => {
     fetch("trending.json")
@@ -14,50 +18,63 @@ const Trending = () => {
       });
   }, []);
 
-  const handleCardClick = (id) => {
+  const navigate = useNavigate();
+
+
+  const shoeDstails = (id) => {
     navigate(`/about/${id}`);
   };
 
   return (
     <div className="trending-container">
       <h1 className="trending-title">Trending Apps</h1>
-      <p className="trending-subtitle">
+
+
+      <p className="trending-paragraph">
         Explore All Trending Apps on the Market developed by us
       </p>
 
       <div className="grid">
-        {apps.map((app) => (
+        {trendyyapps.map((taap) => (
           <div
             className="card"
-            key={app.id}
-            onClick={() => handleCardClick(app.id)}
-            style={{ cursor: "pointer" }}
+            key={taap.id}
+            onClick={() => shoeDstails(taap.id)}
+            
           >
             <div className="card-image">
-              <img src={app.image} alt={app.title} />
+              <img src={taap.image} alt={taap.title} />
             </div>
 
             <div className="card-content">
-              <h3 className="card-title">{app.title}</h3>
-              <p className="card-company">{app.companyName}</p>
-              <p className="card-desc">{app.description}</p>
+              <h3 className="card-title">{taap.title}</h3>
+
+              <p className="card-company">{taap.companyName}</p>
+
+
+              
             </div>
 
             <div className="card-footer">
               <span className="badge downloads">
-                <img src="icon-downloads.png" alt="Downloads" />
-                {(app.downloads / 1000000).toFixed(1)}M
+                <img src="icon-downloads.png" alt="" />
+                {(taap.downloads / 1000000).toFixed(1)}M
               </span>
               <span className="badge reviews">
-                <img src="icon-review.png" alt="Rating" />
-                {app.ratingAvg}
+
+
+
+                <img src="icon-review.png" alt="" />
+
+                {taap.ratingAvg}
               </span>
             </div>
           </div>
         ))}
       </div>
 
-      <button className="show-btn">Show All</button>
+      <button className="all">
+        Show All</button>
     </div>
   );
 };

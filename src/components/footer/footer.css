@@ -1,18 +1,21 @@
 .footer {
-  background-color: #021c34; /* Dark navy */
-  color: #fff;
-  padding: 30px 50px 15px;
+  background-color: #021c34; 
+ 
   position: relative;
-  font-family: Arial, sans-serif;
+
+
+   padding: 30px 50px 15px;
+  
 }
 
-/* Left logo + brand */
+
 .footer-left {
   display: flex;
   align-items: center;
-  gap: 10px;
-  float: left;
+ 
 }
+
+
 
 .footer-logo {
   width: 38px;
@@ -21,20 +24,25 @@
 
 .brand {
   font-size: 16px;
+
+
   font-weight: 600;
-  color: #fff;
+  color: white;
 }
 
-/* Right section */
+
 .footer-right {
   float: right;
   text-align: right;
 }
 
+
+
 .footer-right h4 {
-  margin-bottom: 10px;
-  font-size: 14px;
-  font-weight: 500;
+  margin-bottom: 11px;
+  font-size: 15px;
+
+  font-weight: 600;
 }
 
 .social-icons {
@@ -44,24 +52,19 @@
 }
 
 .social-icons a {
-  background: #fff;
-  color: #000;
+  background: white;
+  color: black;
   border-radius: 50%;
+
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  font-size: 14px;
-  transition: background 0.2s ease, color 0.2s ease;
+ 
+ 
 }
 
-.social-icons a:hover {
-  background: #7b3ef3;
-  color: #fff;
-}
 
-/* Divider Line */
+
 .footer::after {
   content: "";
   display: block;
@@ -71,10 +74,22 @@
   margin: 50px auto 15px;
 }
 
-/* Bottom */
+
 .footer-bottom {
   clear: both;
   text-align: center;
   font-size: 13px;
-  color: #ccc;
+  color: #b0adad;
+}
+
+.footer-left{
+   gap: 10px;
+  float: left;
+}
+
+.social-icons a{
+ justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 17px;
 }

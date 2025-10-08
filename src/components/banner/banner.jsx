@@ -13,8 +13,12 @@ const Banner = () => {
                 into digital experiences that truly make an impact.
             </p>
             <div className="buttons-sideby">
-                <button className="banner-btn">Google Play</button>
-                <button className="banner-btn">App Store</button>
+                <button className="banner-btn"> <a href="https://play.google.com/store/games?hl=en&pli=1"  target="_blank"
+    rel="noopener noreferrer"> Google Play</a></button>
+
+
+                <button className="banner-btn"><a href="https://www.apple.com/app-store/"  target="_blank"
+    rel="noopener noreferrer">App Store</a></button>
             </div>
             <img src="hero.png" alt="Hero Banner" className="hero-img" />
         </div>

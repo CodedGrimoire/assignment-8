@@ -1,33 +1,34 @@
-/* Navbar container */
-.navbar {
+
+.navyy {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 40px;
-  background: #fff;
+ 
+  
   
 }
 
-/* Logo + brand */
-.navbar-logo {
+
+.logo-divv {
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
+
+.logoo-linkss {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
 
 .logo-img {
   width: 36px;
   height: 36px;
 }
 
-.brand {
-  font-size: 16px;
-  font-weight: 600;
-  color: #7b3ef3; /* Purple text like in screenshot */
-}
-
-/* Navbar links */
-.navbar-links {
+.path-link {
   list-style: none;
   display: flex;
   gap: 30px;
@@ -35,35 +36,50 @@
   padding: 0;
 }
 
-.navbar-links li {
+.path-link li {
   font-size: 15px;
   color: #222;
-  cursor: pointer;
-  transition: color 0.2s ease;
+  
 }
 
-.navbar-links li:hover {
-  color: #7b3ef3;
-}
 
-.navbar-links .active {
+
+.path-link .active {
   color: #7b3ef3;
   font-weight: 500;
   text-decoration: underline;
-  text-underline-offset: 4px;
+  
 }
 
-/* Button */
-.navbar-btn {
-    background: #fff;
+
+.navyy{
+ background: white;
+  justify-content: space-between;
+  padding: 12px 40px;
+}
+
+.git-buttons a {
+    background: white;
     align-items: center;
     display: flex;
-     gap: 0px;
+     gap: 6px;
      justify-content: right;
+
     
     }
   
-.navbar-btn button{
+.git-buttons a {
+  flex-direction: row;
+  gap: 1px;
+}
+.git-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  margin-left: 200px;
+}
+.git-buttons button{
   
   
  width: 200px;
@@ -71,17 +87,32 @@
   border: none;
  
   font-size: 14px;
-  font-weight: 500;
-  padding: 8px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-
+  
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  display: flex;
+  border-radius: 5px;
+  gap: 0px;
+ 
+font-weight: 600;
 }
-.navbar-btn:hover {
-  opacity: 0.85;
-}
 
-.btn-icon {
+
+.gitcon{
   font-size: 16px;
+  margin: 0;  
+  padding: 0; 
+  border: orange;
 }
+.git-button{
+  display: flex;
+  
+  gap: 0px;
+}
+
+.git-button h3{
+  text-align: left;
+  justify-content: left;
+}
+
