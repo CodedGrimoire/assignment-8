@@ -24,7 +24,9 @@ const Trending = () => {
   const shoeDstails = (id) => {
     navigate(`/about/${id}`);
   };
-
+const showAll = () => {
+  navigate('/alltheapps');
+};
   return (
     <div className="trending-container">
       <h1 className="trending-title">Trending Apps</h1>
@@ -73,7 +75,7 @@ const Trending = () => {
         ))}
       </div>
 
-      <button className="all">
+      <button className="all" onClick={showAll}>
         Show All</button>
     </div>
   );

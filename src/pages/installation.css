@@ -35,6 +35,7 @@
 .sort-dropdown {
   padding: 6px 10px;
   border: 1px solid #d1d5db;
+  width:250px;
   border-radius: 6px;
   font-size: 14px;
 }
@@ -104,14 +105,12 @@
   border: none;
   padding: 8px 14px;
   border-radius: 6px;
-  cursor: pointer;
+  
   font-size: 14px;
-  transition: background 0.2s;
+  width: 300px;
+  
 }
 
-.uninstall-btn:hover {
-  background: #059669;
-}
 
 .no-apps {
   text-align: center;

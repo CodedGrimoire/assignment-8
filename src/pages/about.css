@@ -4,7 +4,15 @@
   min-height: 100vh;
   color: #111827;
 }
-
+.install-btn{
+ padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  
+  font-weight: 600;
+  margin-top: 10px;
+  width: 250px;
+}
 .loading {
   text-align: center;
   margin-top: 50px;
@@ -81,20 +89,13 @@
 
 .install-btn {
   background: #10b981;
-  color: #fff;
+  color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  margin-top: 10px;
-  transition: background 0.2s;
+ 
+ 
 }
 
-.install-btn:hover {
-  background: #059669;
-}
+
 
 .ratings-section {
   margin-top: 40px;
