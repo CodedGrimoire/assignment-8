@@ -8,18 +8,21 @@ import Home from "./pages/home.jsx";
 import AllTheApps from "./pages/alltheapps.jsx";
 import Installation from "./pages/installation.jsx";
 import About from "./pages/about.jsx";
-import Spinner from "./components/Spinner.jsx";  // ✅ import spinner
+import Spinner from "./components/Spinner.jsx";  
+import Error404 from "./pages/Error404.jsx";
+import AppNotFound from "./pages/AppNotFound.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <h1>404 Not Found!</h1>,
+    errorElement: <Error404 />,   // ✅ 404 page
     children: [
       { index: true, element: <Home /> },
       { path: "alltheapps", element: <AllTheApps /> },
       { path: "installation", element: <Installation /> },
       { path: "about/:id", element: <About /> },
+      { path: "app-not-found", element: <AppNotFound /> },  // ✅ custom route
     ],
   },
 ]);
