@@ -10,10 +10,14 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* Logo + Brand */}
-      <div className="navbar-logo">
-        <img src="./logo.png" alt="HERO.IO Logo" className="logo-img" />
-        <span className="brand">HERO.IO</span>
-      </div>
+    <div className="navbar-logo">
+  <img src="/logo.png" alt="HERO.IO Logo" className="logo-img" />
+  <span style={{ color: "#7b3ef3", fontSize: "18px", fontWeight: "600" }}>
+    HERO.IO
+  </span>
+</div>
+
+
 
       {/* Links */}
       <ul className="navbar-links">

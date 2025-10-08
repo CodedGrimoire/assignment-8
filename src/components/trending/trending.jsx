@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import "./trending.css";
+import { useNavigate } from "react-router-dom";
 
 const Trending = () => {
   const [apps, setApps] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("trending.json")
@@ -11,6 +13,10 @@ const Trending = () => {
         setApps(data);
       });
   }, []);
+
+  const handleCardClick = (id) => {
+    navigate(`/about/${id}`);
+  };
 
   return (
     <div className="trending-container">
@@ -21,7 +27,12 @@ const Trending = () => {
 
       <div className="grid">
         {apps.map((app) => (
-          <div className="card" key={app.id}>
+          <div
+            className="card"
+            key={app.id}
+            onClick={() => handleCardClick(app.id)}
+            style={{ cursor: "pointer" }}
+          >
             <div className="card-image">
               <img src={app.image} alt={app.title} />
             </div>

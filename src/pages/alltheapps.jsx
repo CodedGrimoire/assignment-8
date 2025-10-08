@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import "./alltheapps.css";
+import { useNavigate } from "react-router-dom";
+import Spinner from "../components/Spinner"; // ✅ import the DaisyUI spinner component
 
 const AllTheApps = () => {
   const [apps, setApps] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch("apps.json")
@@ -13,7 +16,23 @@ const AllTheApps = () => {
       });
   }, []);
 
-  // Filter apps based on search
+  const navigate = useNavigate();
+
+  const handleCardClick = (id) => {
+    navigate(`/about/${id}`);
+  };
+
+  // Trigger loading spinner while searching
+  useEffect(() => {
+    if (searchTerm.trim() === "") return; // no spinner if search empty
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 400); // simulate search delay
+    return () => clearTimeout(timer);
+  }, [searchTerm]);
+
+  // Filter apps
   const filteredApps = apps.filter((app) =>
     app.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -37,33 +56,44 @@ const AllTheApps = () => {
         />
       </div>
 
-      {/* Grid */}
-      <div className="grid">
-        {filteredApps.map((app) => (
-          <div className="card" key={app.id}>
-            <div className="card-image">
-              <img src={app.image} alt={app.title} />
-            </div>
+      {/* Spinner while searching */}
+      {loading ? (
+        <div className="flex justify-center items-center py-10">
+          <Spinner />
+        </div>
+      ) : (
+        <div className="grid">
+          {filteredApps.map((app) => (
+            <div
+              className="card"
+              key={app.id}
+              onClick={() => handleCardClick(app.id)}
+              style={{ cursor: "pointer" }}
+            >
+              <div className="card-image">
+                <img src={app.image} alt={app.title} />
+              </div>
 
-            <div className="card-content">
-              <h3 className="card-title">{app.title}</h3>
-              <p className="card-company">{app.companyName}</p>
-              <p className="card-desc">{app.description}</p>
-            </div>
+              <div className="card-content">
+                <h3 className="card-title">{app.title}</h3>
+                <p className="card-company">{app.companyName}</p>
+                <p className="card-desc">{app.description}</p>
+              </div>
 
-            <div className="card-footer">
-              <span className="badge downloads">
-                <img src="icon-downloads.png" alt="Downloads" />
-                {(app.downloads / 1000000).toFixed(1)}M
-              </span>
-              <span className="badge reviews">
-                <img src="icon-review.png" alt="Rating" />
-                {app.ratingAvg}
-              </span>
+              <div className="card-footer">
+                <span className="badge downloads">
+                  <img src="icon-downloads.png" alt="Downloads" />
+                  {(app.downloads / 1000000).toFixed(1)}M
+                </span>
+                <span className="badge reviews">
+                  <img src="icon-review.png" alt="Rating" />
+                  {app.ratingAvg}
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
 
       <button className="show-btn">Show All</button>
     </div>
