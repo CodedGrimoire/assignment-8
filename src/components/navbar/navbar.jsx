@@ -2,7 +2,11 @@ import React from "react";
 import "./navbar.css";
 import { FaGithub } from "react-icons/fa";
 
+import { Link, useLocation } from "react-router-dom";
+
 const Navbar = () => {
+  const location = useLocation();
+
   return (
     <nav className="navbar">
       {/* Logo + Brand */}
@@ -13,11 +17,16 @@ const Navbar = () => {
 
       {/* Links */}
       <ul className="navbar-links">
-        <li className="active">Home</li>
-        <li>Apps</li>
-        <li>Installation</li>
+        <li className={location.pathname === "/" ? "active" : ""}>
+          <Link to="/">Home</Link>
+        </li>
+        <li className={location.pathname === "/alltheapps" ? "active" : ""}>
+          <Link to="/alltheapps">Apps</Link>
+        </li>
+        <li className={location.pathname === "/installation" ? "active" : ""}>
+          <Link to="/installation">Installation</Link>
+        </li>
       </ul>
-
       {/* Button */}
       <div  className="navbar-btn">
       <button>
