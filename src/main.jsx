@@ -27,25 +27,23 @@ const router = createBrowserRouter([
         loader: async () => { await simulateDelay(1000); return null; } 
       },
       { 
-        path: "alltheapps", 
-        element: <AllTheApps />,
+        path: "alltheapps",  element: <AllTheApps />,
         loader: async () => { await simulateDelay(1000); return null; }
       },
       { 
         path: "installation", 
-        element: <Installation />,
-        loader: async () => { await simulateDelay(700); return null; }
-      },
-      { 
-        path: "about/:id", 
-        element: <About />,
-        loader: async () => { await simulateDelay(500); return null; }
+   element: <Installation />,
+       
       },
       { 
         path: "app-not-found", 
         element: <AppNotFound />,
        
       },
+      { 
+        path: "about/:id",  element: <About />,loader: async () => { await simulateDelay(500); return null; }
+      },
+      
     ],
   },
 ]);

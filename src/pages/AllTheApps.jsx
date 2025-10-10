@@ -5,6 +5,8 @@ import Spinner from "../components/Spinner.jsx";
 
 export default function AllTheApps() {
   const [searchTerm, setSearchTerm] = useState("");
+
+
   const [loading, setLoading] = useState(true); 
   const [apps, setApps] = useState([]);
 
@@ -16,6 +18,7 @@ export default function AllTheApps() {
       .then((res) => res.json())
       .then((data) => setApps(data))
       .catch(() => setApps([]))
+
       .finally(() => setLoading(false));
   }, []);
 
@@ -41,6 +44,8 @@ export default function AllTheApps() {
   return (
     <div className="allapps-container">
      
+
+
       <div className="headings">
         <h1>Our All Applications</h1>
         <p>Explore All Apps on the Market developed by us. We code for Millions</p>
@@ -48,10 +53,14 @@ export default function AllTheApps() {
 
      
       <div className="number_search">
-        <h3>{filteredApps.length || apps.length} Apps Found</h3>
+        <h3 className="jqhj">{filteredApps.length || apps.length} Apps Found</h3>
+
+
+
+
         <input
           type="text"
-          placeholder="Search Apps..."
+          placeholder="Search for Apps..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="search-bar"
@@ -61,20 +70,26 @@ export default function AllTheApps() {
       
       {loading ? (
         <div className="flex justify-center items-center py-10">
+
+          
           <Spinner />
         </div>
       ) : filteredApps.length === 0 ? (
         <h2>No apps found.</h2>
+
+        
       ) : (
         <div className="grid">
           {filteredApps.map((app) => (
             <div
               className="card"
               key={app.id}
+
+
               onClick={() => gotoDetailspage(app.id)}
             >
               <div className="card-image">
-                <img src={app.image} alt={app.title} />
+                <img src={app.image} alt="" />
               </div>
 
 
@@ -95,14 +110,15 @@ export default function AllTheApps() {
                 <span className="badge reviews">
                   <img src="/icon-review.png" alt="" />
                   {app.ratingAvg}
+
+
+
                 </span>
               </div>
             </div>
           ))}
         </div>
-      )}
-
-      <button className="show-btn">Show All</button>
-    </div>
+      )}<button onClick={() => setSearchTerm("")} className="show-btn">Show All</button> </div>
+   
   );
 }

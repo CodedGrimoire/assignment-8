@@ -9,7 +9,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Installation = () => {
-  const [apps, setApps] = useState([]);
+  const [Instaapps, setApps] = useState([]);
   const [sortOrder, setSortOrder] = useState("high-low");
 
   useEffect(() => {
@@ -17,6 +17,8 @@ const Installation = () => {
       .then((res) => res.json())
       .then((data) => {
         const installedIds = JSON.parse(localStorage.getItem("installedApps")) || [];
+
+
         const installedApps = data.filter((app) => installedIds.includes(app.id));
         setApps(installedApps);
       });
@@ -24,8 +26,8 @@ const Installation = () => {
 
 
 
-  const handleUninstall = (id) => {
-    const updated = apps.filter((app) => app.id !== id);
+  const handleUninstallunion = (id) => {
+    const updated = Instaapps.filter((app) => app.id !== id);
     setApps(updated);
 
     const installedIds = JSON.parse(localStorage.getItem("installedApps")) || [];
@@ -48,7 +50,7 @@ const Installation = () => {
     });
   };
 
-  const sortedApps = [...apps].sort((a, b) =>
+  const sortedApps = [...Instaapps].sort((a, b) =>
     sortOrder === "high-low" ? b.downloads - a.downloads : a.downloads - b.downloads
   );
 
@@ -59,15 +61,25 @@ const Installation = () => {
         <h1>Your Installed Apps</h1>
         <p>Explore All Trending Apps on the Market developed by us</p>
         <div className="installation-topbar">
-          <span>{apps.length} Apps Found</span>
+
+
+
+          <span>{Instaapps.length} Apps Found</span>
           <select
             className="sort-dropdown"
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value)}
           >
-            <option value="high-low">Sort by Downloads: High → Low</option>
-            <option value="low-high">Sort by Downloads: Low → High</option>
+            <option value="high-low">High → Low</option>
+
+
+            <option value="low-high">Low → High</option>
+
+
+
           </select>
+
+
         </div>
       </div>
 
@@ -75,17 +87,25 @@ const Installation = () => {
         {sortedApps.length > 0 ? (
           sortedApps.map((app) => (
             <div key={app.id} className="installation-card">
+
+
+
               <img src={`/${app.image}`} alt="" className="installation-img" />
               <div className="installation-info">
+
+
                 <h3>{app.title}</h3>
 
 
-                <div className="installation-meta">
+
+                <div className="imax">
                   <span className="downloads">
 
                     <Download className="icon green" />
                     {(app.downloads / 1000000).toFixed(1)}M
                   </span>
+
+                  
                   <span className="rating">
                     <Star className="icon orange" />
                     {app.ratingAvg}
@@ -94,22 +114,27 @@ const Installation = () => {
                   <span className="size">{app.size} MB</span>
                 </div>
               </div>
+
+
               <button
-                className="uninstall-btn"
-                onClick={() => handleUninstall(app.id)}
-              >
-                Uninstall
+                className="uninstall-btn" onClick={() => handleUninstallunion(app.id)}>   Uninstall
+                
+              
+              
               </button>
             </div>
           ))
         ) : (
-          <p className="no-apps">No apps installed.</p>
-        )}
-      </div>
 
-      
-      <ToastContainer />
-    </div>
+
+
+          <p className="no-apps">No apps is installed.</p>
+        )}
+
+
+
+      </div><ToastContainer /></div>
+    
   );
 };
 

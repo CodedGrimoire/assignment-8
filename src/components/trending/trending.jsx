@@ -45,7 +45,7 @@ const showAll = () => {
             
           >
             <div className="card-image">
-              <img src={taap.image} alt={taap.title} />
+              <img src={taap.image} alt="" />
             </div>
 
             <div className="card-content">
