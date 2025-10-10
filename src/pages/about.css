@@ -255,3 +255,13 @@
     height: auto;
   }
 }
+
+
+.ratings-section svg text {
+  fill: #0f172a !important;
+  opacity: 1 !important;
+}
+.ratings-section .recharts-cartesian-axis line,
+.ratings-section .recharts-cartesian-axis-tick-line {
+  stroke: #0f172a !important;
+}

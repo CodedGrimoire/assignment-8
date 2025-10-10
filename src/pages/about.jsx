@@ -6,6 +6,7 @@ import { Download, Star, MessageSquare } from "lucide-react";
 import "./about.css";
 
 
+import { CartesianGrid } from "recharts";
 
 
 
@@ -13,6 +14,7 @@ import {
   BarChart,
   Bar,
   XAxis,
+  LabelList, 
   YAxis,
   Tooltip,
   ResponsiveContainer,
@@ -68,7 +70,7 @@ const About = () => {
 
  const ratingsDataforgraph = app.ratings.slice().reverse().map((rate) => ({
   name: rate.name,
-  count: rate.count,
+  count: Number(rate.count),
 }));
 
 
@@ -89,7 +91,7 @@ const About = () => {
         autoClose: 2010,
         hideProgressBar: false,
 
-        closeOnClick: true,
+        
 
         pauseOnHover: true,
         draggable: false,
@@ -176,9 +178,22 @@ const About = () => {
           <BarChart
             data={ratingsDataforgraph}
             layout="vertical"
-            margin={{ left: 41, right: 23 }}
+            margin={{ left: 41, right: 23,bottom: 38 }}
+            style={{ overflow: 'visible' }}
           >
-            <XAxis type="number" hide />
+            <CartesianGrid strokeDasharray="3 3" />
+
+  <XAxis
+  type="number"
+  height={28}              
+  tickMargin={8}          
+  allowDecimals={false}
+  tick={{ fill: '#111827', fontSize: 12 }}
+  axisLine={{ stroke: '#CBD5E1' }}
+  tickLine={{ stroke: '#CBD5E1' }}
+/>
+
+
 
             <YAxis
               dataKey="name"
@@ -187,7 +202,10 @@ const About = () => {
               tickLine={false}
             />
             <Tooltip />
-            <Bar dataKey="count" fill="#f97316" barSize={21} />
+           <Bar dataKey="count" fill="#f97316" barSize={21}>
+  <LabelList dataKey="count" position="right" />  
+</Bar>
+
           </BarChart>
 
         </ResponsiveContainer>
