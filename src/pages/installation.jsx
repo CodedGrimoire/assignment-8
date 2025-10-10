@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./installation.css";
+
 import { Download, Star } from "lucide-react";
+
+
 import { toast, ToastContainer } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 
 const Installation = () => {
@@ -18,6 +22,8 @@ const Installation = () => {
       });
   }, []);
 
+
+
   const handleUninstall = (id) => {
     const updated = apps.filter((app) => app.id !== id);
     setApps(updated);
@@ -30,13 +36,13 @@ const Installation = () => {
 
     toast.success("App Uninstalled Successfully!", {
       position: "top-right",
-      autoClose: 2000,
+      autoClose: 2010,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       style: {
-        fontSize: "14px",
+        fontSize: "13px",
         minWidth: "220px",
       },
     });
@@ -45,6 +51,7 @@ const Installation = () => {
   const sortedApps = [...apps].sort((a, b) =>
     sortOrder === "high-low" ? b.downloads - a.downloads : a.downloads - b.downloads
   );
+
 
   return (
     <div className="installation-container">
@@ -68,11 +75,14 @@ const Installation = () => {
         {sortedApps.length > 0 ? (
           sortedApps.map((app) => (
             <div key={app.id} className="installation-card">
-              <img src={`/${app.image}`} alt={app.title} className="installation-img" />
+              <img src={`/${app.image}`} alt="" className="installation-img" />
               <div className="installation-info">
                 <h3>{app.title}</h3>
+
+
                 <div className="installation-meta">
                   <span className="downloads">
+
                     <Download className="icon green" />
                     {(app.downloads / 1000000).toFixed(1)}M
                   </span>
@@ -80,6 +90,7 @@ const Installation = () => {
                     <Star className="icon orange" />
                     {app.ratingAvg}
                   </span>
+                  
                   <span className="size">{app.size} MB</span>
                 </div>
               </div>

@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
+
+import { Download, Star, MessageSquare } from "lucide-react";
 import "./about.css";
 
-// lucide icons
-import { Download, Star, MessageSquare } from "lucide-react";
 
-// recharts for ratings
+
+
+
 import {
   BarChart,
   Bar,
@@ -15,28 +18,42 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-// react-toastify
+
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const About = () => {
-  const { id } = useParams();
-  const [app, setApp] = useState(null);
-  const [installed, setInstalled] = useState(false);
 
-  // Fetch app details
+  const [installed, isItInstalled] = useState(false);
+
+
+  
+  const [app, setApp] = useState(null);
+
+  const { id } = useParams();
+  
+
+ 
   useEffect(() => {
     fetch("/apps.json")
       .then((res) => res.json())
       .then((data) => {
+
         const foundApp = data.find((item) => item.id === parseInt(id));
         setApp(foundApp);
 
-        // check localStorage if installed
+        
+
+        
+
         const installedApps =
           JSON.parse(localStorage.getItem("installedApps")) || [];
+
+
         if (foundApp && installedApps.includes(foundApp.id)) {
-          setInstalled(true);
+
+
+          isItInstalled(true);
         }
       });
   }, [id]);
@@ -45,56 +62,82 @@ const About = () => {
     return <p className="loading">Loading app details...</p>;
   }
 
-  // Ratings data for chart
-  const ratingsData = app.ratings.map((r) => ({
-    name: r.name,
-    count: r.count,
-  }));
 
-  // Install logic
+
+
+
+ const ratingsDataforgraph = app.ratings.slice().reverse().map((rate) => ({
+  name: rate.name,
+  count: rate.count,
+}));
+
+
   const handleInstall = () => {
     const installedApps =
       JSON.parse(localStorage.getItem("installedApps")) || [];
     if (!installedApps.includes(app.id)) {
       installedApps.push(app.id);
+
+
       localStorage.setItem("installedApps", JSON.stringify(installedApps));
-      setInstalled(true);
+
+      isItInstalled(true);
+
 
       toast.success("App Installed Successfully!", {
         position: "top-right",
-        autoClose: 2000,
+        autoClose: 2010,
         hideProgressBar: false,
+
         closeOnClick: true,
+
         pauseOnHover: true,
-        draggable: true,
+        draggable: false,
         style: {
-          fontSize: "14px",
-          minWidth: "220px",
+          fontSize: "17px",
+
+
+          minWidth: "221px",
         },
       });
     }
   };
 
+  
+
   return (
     <div className="about-container">
       <div className="about-header">
         <div className="about-left">
-          <img src={`/${app.image}`} alt={app.title} className="about-img" />
-        </div>
+
+
+          <img src={`/${app.image}`} alt="" className="about-img" /></div>
+
+
+        
         <div className="about-right">
+
+
           <h2 className="about-title">{app.title}</h2>
           <p className="about-company">Developed by {app.companyName}</p>
 
           <div className="about-stats">
+
+
             <div className="stat">
               <Download className="stat-icon green" />
+
+
               <span>
                 <strong>{(app.downloads / 1000000).toFixed(0)}M</strong>
                 <br />
-                Downloads
-              </span>
+
+
+                Downloads </span>
+             
             </div>
             <div className="stat">
+
               <Star className="stat-icon orange" />
               <span>
                 <strong>{app.ratingAvg}</strong>
@@ -110,6 +153,8 @@ const About = () => {
                 Reviews
               </span>
             </div>
+
+
           </div>
 
           <button
@@ -117,8 +162,11 @@ const About = () => {
             disabled={installed}
             onClick={handleInstall}
           >
-            {installed ? "Installed" : `Install Now (${app.size} MB)`}
-          </button>
+
+
+            {installed ? "Installed" : `Install Now (${app.size} MB)`}</button>
+
+          
         </div>
       </div>
 
@@ -126,11 +174,12 @@ const About = () => {
         <h3>Ratings</h3>
         <ResponsiveContainer width="100%" height={250}>
           <BarChart
-            data={ratingsData}
+            data={ratingsDataforgraph}
             layout="vertical"
-            margin={{ left: 40, right: 20 }}
+            margin={{ left: 41, right: 23 }}
           >
             <XAxis type="number" hide />
+
             <YAxis
               dataKey="name"
               type="category"
@@ -138,8 +187,9 @@ const About = () => {
               tickLine={false}
             />
             <Tooltip />
-            <Bar dataKey="count" fill="#f97316" barSize={20} />
+            <Bar dataKey="count" fill="#f97316" barSize={21} />
           </BarChart>
+
         </ResponsiveContainer>
       </div>
 
@@ -148,7 +198,7 @@ const About = () => {
         <p>{app.description}</p>
       </div>
 
-      {/* Toast container */}
+     
       <ToastContainer />
     </div>
   );

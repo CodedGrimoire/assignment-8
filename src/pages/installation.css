@@ -1,68 +1,66 @@
 .installation-container {
-  padding: 40px;
-  background: #f9fafb;
-  min-height: 100vh;
+  padding: 38px;
+  background: white;
+
+  
 }
 
 .installation-header {
+
+  margin-bottom: 28px;
+
+
   text-align: center;
-  margin-bottom: 30px;
+  
 }
 
-.installation-header h1 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #111827;
-}
 
-.installation-header p {
-  color: #6b7280;
-  margin-top: 5px;
-}
 
 .installation-topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-}
+ justify-content: space-between;
+ 
+   margin-top: 20px;
 
-.installation-topbar span {
-  font-weight: 500;
-  color: #374151;
+
+  
+  
+ 
 }
 
 .sort-dropdown {
-  padding: 6px 10px;
-  border: 1px solid #d1d5db;
-  width:250px;
-  border-radius: 6px;
-  font-size: 14px;
+  padding: 7px 10px;
+
+  color: black;
+ background: white;
+ 
+  
 }
+
 
 .installation-list {
   margin-top: 20px;
   display: flex;
+
+   gap: 16px;
   flex-direction: column;
-  gap: 16px;
+ 
 }
 
 .installation-card {
   display: flex;
   align-items: center;
-  background: #fff;
-  padding: 14px 18px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  justify-content: space-between;
+
+   border-radius: 8px;
+ 
 }
 
 .installation-img {
   width: 60px;
-  height: 60px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-right: 16px;
+
+   margin-right: 16px;
+  height: 80px;
+ 
+ 
 }
 
 .installation-info {
@@ -71,17 +69,22 @@
 
 .installation-info h3 {
   margin: 0;
-  font-size: 16px;
+
+  color: black;
+  font-size: 17px;
+
   font-weight: 600;
-  color: #111827;
+  
 }
 
 .installation-meta {
   display: flex;
+   font-size: 16px;
+
   align-items: center;
-  gap: 15px;
+  gap: 17px;
   margin-top: 4px;
-  font-size: 14px;
+ 
   color: #374151;
 }
 
@@ -91,58 +94,108 @@
   margin-right: 4px;
 }
 
+
+
 .green {
   color: #10b981;
 }
 
-.orange {
-  color: #f97316;
+
+.installation-header p {
+  color: #6b7280;
+  margin-top: 5px;
 }
+
 
 .uninstall-btn {
   background: #10b981;
-  color: white;
+  
   border: none;
-  padding: 8px 14px;
+
+   font-size: 14px;
+ 
   border-radius: 6px;
   
-  font-size: 14px;
+ 
   width: 300px;
   
 }
 
 
+.installation-img{
+   border-radius: 8px;
+  object-fit: cover;
+}
+
+
+
 .no-apps {
   text-align: center;
+
+  color: #4e535f;
   margin-top: 40px;
-  color: #6b7280;
+  
 }
 
-/* Toast */
-.toast {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #10b981;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  animation: fadeInOut 2s ease forwards;
+
+.installation-topbar span {
+  font-weight: 500;
+
+  color: #29313d;
 }
+
 
 .toast-icon {
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 17px;
 }
 
-@keyframes fadeInOut {
-  0% { opacity: 0; transform: translateY(20px); }
-  10% { opacity: 1; transform: translateY(0); }
-  90% { opacity: 1; }
-  100% { opacity: 0; transform: translateY(20px); }
+
+.uninstall-btn {
+color: white;
+ padding: 8px 14px;
+}
+
+
+.installation-card{
+   background: white;
+  padding: 14px 18px;
+ 
+ 
+  justify-content: space-between;
+}
+
+.installation-header h1 {
+  font-size: 31px;
+color: black;
+
+  font-weight: 700;
+ 
+}
+
+
+
+.sort-dropdown{
+  width:250px;
+
+  border-radius: 5px;
+
+
+  font-size: 15px;
+}
+
+.installation-topbar {
+  display: flex;
+  
+  align-items: center;
+
+}
+
+
+.orange {
+  color: #f97316;
+}
+
+.installation-container{
+  min-height: 100vh;
 }
