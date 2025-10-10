@@ -9,7 +9,12 @@
  
 }
 
-
+.no-results-img{
+width:200px;
+height: auto;
+align-items: center;
+justify-content: center;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -132,6 +137,14 @@
 }
 
 
+
+.no-results{
+  display: flex;
+  flex-direction: column;
+  gap :20px;
+  justify-content: center;
+  align-items: center;
+}
 
 .show-btn {
   background: linear-gradient(90deg, #7b3ef3, #a855f7);

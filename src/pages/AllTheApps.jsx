@@ -75,7 +75,11 @@ export default function AllTheApps() {
           <Spinner />
         </div>
       ) : filteredApps.length === 0 ? (
-        <h2>No apps found.</h2>
+         <div className="no-results">
+           <img src="/App-Error.png" alt="" className="no-results-img" />
+
+           <button onClick={() => setSearchTerm("")} className="show-btn">Show All</button>
+</div>
 
         
       ) : (
@@ -118,7 +122,7 @@ export default function AllTheApps() {
             </div>
           ))}
         </div>
-      )}<button onClick={() => setSearchTerm("")} className="show-btn">Show All</button> </div>
+      )} </div>
    
   );
 }

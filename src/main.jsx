@@ -12,7 +12,7 @@ import Spinner from "./components/Spinner.jsx";
 import Error404 from "./pages/Error404.jsx";
 import AppNotFound from "./pages/AppNotFound.jsx";
 
-// Helper to simulate network delay
+
 const simulateDelay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const router = createBrowserRouter([
