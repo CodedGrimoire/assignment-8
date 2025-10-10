@@ -1,16 +1,23 @@
 import './App.css';
 import Navbar from './components/navbar/navbar';
+import Spinner from './components/Spinner';
 import Footer from './components/footer/footer';
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 
 function App() {
+  const navigation = useNavigation(); // ✅ initialize
+
   return (
     <>
       <Navbar />
-      <main>
-        {/* This is where child routes (Home, Alltheapps) render */}
-        <Outlet />
+
+      <main className="min-h-[300px] flex flex-col items-center justify-center gap-4">
+        
+
+       
+        {navigation.state === "loading" ? <Spinner /> : <Outlet />}
       </main>
+
       <Footer />
     </>
   );
