@@ -199,3 +199,16 @@ color: black;
 .installation-container{
   min-height: 100vh;
 }
+
+@media (max-width: 576px){
+  .installation-card{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap :20px;
+  }
+
+  .installation-img{
+    align-items: flex-start;
+  }
+}

@@ -156,3 +156,20 @@
   padding: 10px 24px;
   border-radius: 6px;
 }
+
+@media (max-width: 576px){
+
+  body{
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .trending-container{
+    margin-right: 0;
+  }
+}

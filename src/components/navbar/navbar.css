@@ -75,22 +75,26 @@
 .git-buttons{
   display: flex;
   align-items: center;
-  justify-content: center;
+  
   width: 150px;
+
+  justify-content: center;
   margin-left: 200px;
 }
+
+
 .git-buttons button{
   
   
  width: 200px;
-  background: linear-gradient(90deg, #7b3ef3, #a855f7);
-  border: none;
+  height: 40px;
+
+
  
-  font-size: 14px;
   
   justify-content: center;
   align-items: center;
-  height: 40px;
+ 
   display: flex;
   border-radius: 5px;
   gap: 0px;
@@ -116,3 +120,41 @@ font-weight: 600;
   justify-content: left;
 }
 
+
+
+.git-buttons button{
+ background: linear-gradient(90deg, #7b3ef3, #a855f7);
+  border: none;
+ 
+  font-size: 15px;
+}
+
+
+
+
+
+@media (max-width: 576px){
+
+
+   
+  .navyy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap :10px;
+    
+    align-items: center;
+  }
+.logo-divv {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+  .git-buttons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+}

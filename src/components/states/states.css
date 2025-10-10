@@ -48,3 +48,20 @@
   color: white;
   text-align: center;
 }
+
+@media (max-width: 576px) {
+
+  .states{
+    margin: 0px;
+    padding: 50px;
+
+   
+  }
+
+  .states-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap :28px;
+  }
+}
